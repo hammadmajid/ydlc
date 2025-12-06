@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 300px;
+            background-color: #0f0f0f;
+            color: #fff;
+            font-family: Roboto, Arial, sans-serif;
+            padding: 16px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            background-color: #212121;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .toggle-label {
+            font-size: 14px;
+        }
+
+        .toggle {
+            width: 40px;
+            height: 24px;
+            background-color: #565656;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            position: relative;
+        }
+
+        .toggle.active {
+            background-color: #065fd4;
+        }
+
+        .toggle::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: left 0.2s;
+        }
+
+        .toggle.active::after {
+            left: 18px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 8px 12px;
+            background-color: #212121;
+            color: #fff;
+            border: 1px solid #565656;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.2s;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #313131;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #909090;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div class="header">
+            <h1>YouTube Description Link Cleaner</h1>
+        </div>
+
+        <div class="buttons">
+            <a class="btn" id="sourceBtn" href="https://github.com/hammadmajid/ydlc" target="_blank">Source</a>
+            <a class="btn" id="donateBtn" href="https://example.com/donate" target="_blank">Donate</a>
+        </div>
+
+        <div class="footer">
+            MIT licensed
+        </div>
+    </div>
+
+    <script src="popup.js" defer></script>
+</body>
+
+</html>
